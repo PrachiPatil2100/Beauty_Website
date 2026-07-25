@@ -45,10 +45,10 @@ jobs:
             docker stop beauty-website-container || true
             docker rm beauty-website-container || true
             
-            # 3. Run the new container, mapping EC2's port 80 to Nginx's port 80
+            # 3. Run the new container, mapping EC2's port 8080 to Nginx's port 8080
             docker run -d \
               --name beauty-website-container \
-              -p 80:80 \
+              -p 8080:80 \
               --restart unless-stopped \
               ${{ secrets.DOCKER_USERNAME }}/embrace-beauty-site:latest
             
