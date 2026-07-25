@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmbraceYourself | Beauty & Wellness</title>
+    
+    <!-- Google Fonts: Playfair Display & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'warm-cream': '#FDFBF7',
+                        'charcoal': '#2F2F2F',
+                        'blush-pink': '#F4E1E1',
+                        'sage-green': '#D4E0D9',
+                        'soft-gold': '#D4AF37',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Sticky Header Transition */
+        header { transition: background-color 0.3s ease; }
+        .scrolled { background-color: #FDFBF7; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        
+        /* Hero Image - Set up for a highly realistic, authentic portrait */
+        .hero-bg {
+            background-image: linear-gradient(rgba(47, 47, 47, 0.4), rgba(47, 47, 47, 0.4)), url('https://images.unsplash.com/photo-1512413316925-fd4f9201f005?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-warm-cream text-charcoal font-sans antialiased">
+
+    <!-- 1. Header / Navigation -->
+    <header id="navbar" class="fixed w-full top-0 z-50 py-4 px-8 flex justify-between items-center text-charcoal">
+        <nav class="hidden md:flex space-x-6 text-sm font-medium tracking-wider uppercase">
+            <a href="#skincare" class="hover:text-soft-gold transition">Skincare</a>
+            <a href="#makeup" class="hover:text-soft-gold transition">Makeup</a>
+            <a href="#hair" class="hover:text-soft-gold transition">Haircare</a>
+        </nav>
+        
+        <div class="text-3xl font-serif font-bold tracking-wide">
+            EmbraceYourself
+        </div>
+        
+        <nav class="hidden md:flex space-x-6 text-sm font-medium tracking-wider uppercase items-center">
+            <a href="#about" class="hover:text-soft-gold transition">About</a>
+            <a href="#contact" class="hover:text-soft-gold transition">Contact</a>
+            <button class="hover:text-soft-gold transition"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="hero-bg h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-warm-cream text-5xl md:text-7xl font-serif font-bold mb-6 drop-shadow-md">Radiate Confidence.<br>Embrace Yourself.</h1>
+        <p class="text-warm-cream text-lg md:text-xl font-light max-w-2xl mb-10 drop-shadow-sm">Inclusive, expert-backed beauty and wellness advice designed to help you glow from the inside out. Your beauty, your rules.</p>
+        <button class="bg-sage-green text-warm-cream px-8 py-4 rounded-full uppercase tracking-widest text-sm font-semibold hover:bg-opacity-90 transition shadow-lg">Explore the Guides</button>
+    </section>
+
+    <!-- 3. Category Carousel -->
+    <section class="py-16 px-8 max-w-7xl mx-auto -mt-20 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="relative h-64 rounded-lg overflow-hidden group cursor-pointer shadow-md">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=600&q=80" alt="Authentic skincare routine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-blush-pink bg-opacity-60 flex justify-center items-center">
+                    <h3 class="font-serif text-2xl font-semibold text-charcoal">Skincare Routines</h3>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="relative h-64 rounded-lg overflow-hidden group cursor-pointer shadow-md">
+                <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&fit=crop&w=600&q=80" alt="Realistic everyday makeup" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-blush-pink bg-opacity-60 flex justify-center items-center">
+                    <h3 class="font-serif text-2xl font-semibold text-charcoal">Everyday Makeup</h3>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="relative h-64 rounded-lg overflow-hidden group cursor-pointer shadow-md">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=600&q=80" alt="Natural haircare" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-blush-pink bg-opacity-60 flex justify-center items-center">
+                    <h3 class="font-serif text-2xl font-semibold text-charcoal">Haircare Secrets</h3>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="relative h-64 rounded-lg overflow-hidden group cursor-pointer shadow-md">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Holistic wellness practices" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-blush-pink bg-opacity-60 flex justify-center items-center">
+                    <h3 class="font-serif text-2xl font-semibold text-charcoal">Holistic Wellness</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured Articles / Tips Grid -->
+    <section class="py-20 px-8 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-serif text-center mb-16">The Latest in Beauty & Wellness</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Article 1 -->
+            <article class="flex flex-col">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Realistic glowing skin" class="w-full h-80 object-cover mb-6 rounded-sm shadow-sm">
+                <span class="text-soft-gold text-xs font-bold tracking-widest uppercase mb-3">Skincare</span>
+                <h3 class="font-serif text-2xl mb-3 font-semibold">The 5-Minute Morning Glow-Up</h3>
+                <p class="text-gray-600 mb-6 font-light leading-relaxed flex-grow">Discover the minimalist skincare routine that delivers maximum radiance before your morning coffee even finishes brewing.</p>
+                <a href="#" class="text-sm font-semibold tracking-wider uppercase hover:text-soft-gold transition flex items-center">Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+            </article>
+            <!-- Article 2 -->
+            <article class="flex flex-col">
+                <img src="https://images.unsplash.com/photo-1531316282956-d38457be0993?auto=format&fit=crop&w=600&q=80" alt="Restful sleep" class="w-full h-80 object-cover mb-6 rounded-sm shadow-sm">
+                <span class="text-soft-gold text-xs font-bold tracking-widest uppercase mb-3">Wellness</span>
+                <h3 class="font-serif text-2xl mb-3 font-semibold">Beauty Sleep is Real: Maximizing Your PM Routine</h3>
+                <p class="text-gray-600 mb-6 font-light leading-relaxed flex-grow">How to strategically layer your nighttime products and optimize your rest for deep cellular repair and rejuvenation.</p>
+                <a href="#" class="text-sm font-semibold tracking-wider uppercase hover:text-soft-gold transition flex items-center">Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+            </article>
+            <!-- Article 3 -->
+            <article class="flex flex-col">
+                <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=80" alt="Authentic skin finish makeup" class="w-full h-80 object-cover mb-6 rounded-sm shadow-sm">
+                <span class="text-soft-gold text-xs font-bold tracking-widest uppercase mb-3">Makeup</span>
+                <h3 class="font-serif text-2xl mb-3 font-semibold">The Perfect "No-Makeup" Makeup Base</h3>
+                <p class="text-gray-600 mb-6 font-light leading-relaxed flex-grow">A step-by-step, inclusive guide to achieving a flawless, breathable, skin-like finish that effortlessly lasts all day.</p>
+                <a href="#" class="text-sm font-semibold tracking-wider uppercase hover:text-soft-gold transition flex items-center">Read More <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+            </article>
+        </div>
+    </section>
+
+    <!-- 5. Expert Advice / Quote Section -->
+    <section class="bg-blush-pink py-24 px-8 text-center">
+        <div class="max-w-4xl mx-auto">
+            <i class="fa-solid fa-quote-left text-soft-gold text-4xl mb-6 opacity-70"></i>
+            <h2 class="text-3xl md:text-5xl font-serif italic font-light leading-snug mb-8">
+                "True beauty is not about masking who you are. It is about illuminating the unique, vibrant features that make you, you."
+            </h2>
+            <p class="text-charcoal font-semibold tracking-widest uppercase text-sm">– The EmbraceYourself Philosophy</p>
+        </div>
+    </section>
+
+    <!-- 6. Newsletter Sign-up -->
+    <section class="bg-sage-green">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1608248593842-80838166c303?auto=format&fit=crop&w=1000&q=80" alt="Spa essentials flatlay" class="w-full h-full object-cover min-h-[400px]">
+            </div>
+            <div class="md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+                <h2 class="text-4xl font-serif font-bold mb-6 text-charcoal">Unlock Your Best Skin.</h2>
+                <p class="text-charcoal mb-8 font-light text-lg leading-relaxed">Join the <em>EmbraceYourself</em> community today. Enter your email below for exclusive weekly tips and receive our <strong>7-Day Glowing Skin Guide</strong>—absolutely free.</p>
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Enter your email address..." class="flex-grow px-6 py-4 rounded-full bg-warm-cream text-charcoal focus:outline-none focus:ring-2 focus:ring-soft-gold" required>
+                    <button type="submit" class="bg-charcoal text-warm-cream px-8 py-4 rounded-full font-semibold uppercase tracking-wider hover:bg-opacity-90 transition">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer class="bg-warm-cream border-t border-soft-gold border-opacity-30 pt-16 pb-8 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <h4 class="font-serif text-xl font-bold mb-4">About EmbraceYourself</h4>
+                <p class="text-gray-600 font-light leading-relaxed text-sm pr-4">Founded on the core belief that beauty is for everyone, we are your trusted companion for accessible, empowering wellness.</p>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl font-bold mb-4">Legal</h4>
+                <ul class="space-y-3 text-sm text-gray-600 font-light">
+                    <li><a href="#" class="hover:text-soft-gold transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-soft-gold transition">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-soft-gold transition">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl font-bold mb-4">Let's Connect</h4>
+                <div class="flex space-x-5 text-xl text-charcoal">
+                    <a href="#" class="hover:text-soft-gold transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-soft-gold transition"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="hover:text-soft-gold transition"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 font-light tracking-wide">
+            © 2020 EmbraceYourself. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Script for Sticky Header -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
